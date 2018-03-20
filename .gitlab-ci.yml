@@ -1,0 +1,28 @@
+build:
+  stage: build
+  image: blang/latex:ubuntu
+  script:
+    - pdflatex resume.tex
+    - cat resume.log
+  artifacts:
+    paths:
+      - resume.log
+      - resume.out
+      - resume.pdf
+
+deploy:
+  stage: deploy
+  dependencies:
+    - build
+  environment:
+    name: production
+    url: https://resume.quentindawans.com
+  before_script:
+    - apk --update add openssh-client rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_KEY" | ssh-add -
+  script:
+    - rsync -ae "ssh -o StrictHostKeyChecking=no" --delete --stats resume.pdf resume-ci@static-1.quentindawans.infra:resume
+  when: manual
+  only:
+    - master
