@@ -1,6 +1,6 @@
 # Quentin Dawans résumé
 
-Forked from: https://www.overleaf.com/latex/examples/recreating-business-insiders-cv-of-marissa-mayer-using-altacv/gtqfpbwncfvp
+Forked from: https://git.quentindawans.com/quent/resume
 
 # Original Readme
 
