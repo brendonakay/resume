@@ -1,4 +1,4 @@
-# Brendon A. Kayt résumé
+# Brendon A. Kay résumé
 
 Forked from: https://git.quentindawans.com/quent/resume
 
