@@ -1,4 +1,4 @@
-# Quentin Dawans résumé
+# Brendon A. Kayt résumé
 
 Forked from: https://git.quentindawans.com/quent/resume
 
